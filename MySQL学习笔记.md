@@ -40,8 +40,7 @@ DBMS--执行-->sql--操作-->DB
 
 控制面板\系统和安全\管理工具 找到服务
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211202174139697.png" alt="image-20211202174139697" style="zoom:50%;" />
-
+https://s2.loli.net/2021/12/09/4iHgn5BUj3oq68a.png
 
 
 ## 启动与关闭服务
@@ -73,8 +72,7 @@ net start MySQL
 1. 退出mysql： exit
 2.  查看MySQL中有哪些数据库： show databases;   
 
-![image-20211202211318201](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211202211318201.png)
-
+https://s2.loli.net/2021/12/09/DazHlsq7TnBb4mF.png
 ​       MySQL默认自带数据库有四个
 
    3.使用数据库：use 数据库名;
@@ -151,7 +149,7 @@ mysql> source C:\Users\郝锦杰\Desktop\木犀\MySQL学习资料\document\bjpow
 
 ## 关于导入的这几张表
 
-![image-20211203080432390](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203080432390.png)
+ https://s2.loli.net/2021/12/09/scCPXDlpJSKoULe.png
 
 dept：部门表
 
@@ -163,11 +161,11 @@ salgrade：工资等级表
 
 **select * from 表名;**  （统一使用此SQL语句）（*代表所有，前面句代表查询所有结构）
 
-![image-20211203080807621](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203080807621.png)
+ https://s2.loli.net/2021/12/09/kBQM9Eav8SIZA5f.png
 
-![image-20211203080827396](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203080827396.png)
+https://s2.loli.net/2021/12/09/DXbwI6v9YGgxBJO.png
 
-![image-20211203080849080](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203080849080.png)
+https://s2.loli.net/2021/12/09/aLOw5kEP1ihRo2s.png
 
 ## desc 只看表的结构
 
@@ -175,11 +173,11 @@ salgrade：工资等级表
 
 部门编号/部门名字/地理位置
 
-![image-20211203081334442](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203081334442.png)
+https://s2.loli.net/2021/12/09/QgC4Ho8bktujhWp.png
 
 员工编号/
 
-![image-20211203081402014](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203081402014.png)
+![image-20211203081402014.png](https://s2.loli.net/2021/12/09/7nKjOIJ4ENDialA.png)
 
 ![image-20211203081418401](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203081418401.png)
 
