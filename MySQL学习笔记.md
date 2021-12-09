@@ -2,7 +2,7 @@
 
 安装成功截图
 
-![image-20211128171146810](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211128171146810.png)
+![image-20211128171146810.png](https://s2.loli.net/2021/12/09/HRsJdnEwTYgNBmD.png)
 
 路径
 
