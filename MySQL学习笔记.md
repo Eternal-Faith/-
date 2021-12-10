@@ -468,7 +468,7 @@ select ename,sal from emp order by 2; //不建议这么写
 
 select ename,sal from emp where sal between 1250 and 3000 order by sal desc;
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203200538389.png" alt="image-20211203200538389" style="zoom:80%;" />
+![image-20211203200538389.png](https://s2.loli.net/2021/12/10/6srtuvlI3eqgFLV.png)
 
 语句执行顺序：from--where--select--order
 
@@ -520,13 +520,14 @@ eg:~~select substr(ename, 0 ,1)  as ename from emp;~~
 
 eg: select concat(empno,ename) from emp; 
 
-![image-20211203203451401](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203203451401.png)
+
+![image-20211203203451401.png](https://s2.loli.net/2021/12/10/bPyBdqHfVvlCh7Y.png)
 
 #### length 取长度
 
 select length(ename) enamelength from emp;
 
-![image-20211203203749637](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203203749637.png)
+![image-20211203203749637.png](https://s2.loli.net/2021/12/10/15LFhUgRm7ntrCi.png)
 
 #### trim 去空格
 
@@ -540,8 +541,7 @@ select 后面可以加某个表的字段名（等同于变量名），也可以�
 
 eg：保留整数：select round(1236.567,0) as result from emp;
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203205018351.png" alt="image-20211203205018351" style="zoom:80%;" />
-
+![image-20211203205018351.png](https://s2.loli.net/2021/12/10/m6fWe3AqXNRn5UE.png)
 保留1位小数：select round(1236.567,1) as result from emp;
 
 保留2位小数：select round(1236.567,2) as result from emp;
@@ -712,7 +712,7 @@ select deptno,max(sal) from emp group by deptno;
 
 先找出数据：select ename,sal,job,deptno from emp;
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203223142071.png" alt="image-20211203223142071" style="zoom:80%;" />
+![image-20211203223142071.png](https://s2.loli.net/2021/12/10/vphWwFjs8u1GMSK.png)
 
 #### **按两个字段进行分组**
 
@@ -785,7 +785,7 @@ eg：找出每个岗位的平均薪资，要求显示平均薪资大于1500的�
 
 select job,avg(sal) as avgsal from emp  where job <> 'manager' group by job having avg(sal) > 1500 order by avgsal desc;
 
-![image-20211204084053372](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211204084053372.png)
+![image-20211204084053372.png](https://s2.loli.net/2021/12/10/xipgJlVdjK6ry1f.png)
 
 select
 		job,avg(sal) as avgsal
