@@ -1153,8 +1153,7 @@ on
 ```
 
 结果如下：
-
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205144721956.png" alt="image-20211205144721956" style="zoom:67%;" />
+![image-20211205144721956.png](https://s2.loli.net/2021/12/10/x6SPmkvZ75LWNFz.png)
 
 ## 子查询
 
@@ -1193,7 +1192,7 @@ where
 select min(sal) from emp;
 ```
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205145918768.png" alt="image-20211205145918768" style="zoom: 80%;" />
+![image-20211205145918768.png](https://s2.loli.net/2021/12/10/rZKqk9JL5if4jza.png)
 
 第二步：找出大于最低工资的数据
 
@@ -1207,7 +1206,7 @@ select ename,sal from emp where sal > 800;
 select ename,sal from emp where sal > (select min(sal) from emp);
 ```
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205150115435.png" alt="image-20211205150115435" style="zoom:80%;" />
+![image-20211205150115435.png](https://s2.loli.net/2021/12/10/lFTmo4JHcWGyINq.png)
 
 #### from子句中的子查询
 
@@ -1225,8 +1224,7 @@ from
 group by
 	job;
 ```
-
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205150845353.png" alt="image-20211205150845353" style="zoom:80%;" /><img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205151606368.png" alt="image-20211205151606368" style="zoom:80%;" />
+![image-20211205150845353.png](https://s2.loli.net/2021/12/10/jmPIpL12Su76eTZ.png)![image-20211205151606368.png](https://s2.loli.net/2021/12/10/zefaPEUNA39JL1u.png)
 
 第二步：克服心理障碍，把以上查询结果当做一张真实存在的表t。（左边表为t，右边的表为s）
 
@@ -1255,7 +1253,7 @@ on
 
 结果如下：
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205152519682.png" alt="image-20211205152519682" style="zoom:80%;" />
+![image-20211205152519682.png](https://s2.loli.net/2021/12/10/6SOv3oGEk9DKtuj.png)
 
 #### select后面出现的子查询（了解即可）
 
@@ -1316,8 +1314,7 @@ order by
 	sal desc
 limit 5;
 ```
-
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205155637533.png" alt="image-20211205155637533" style="zoom:67%;" />
+![image-20211205155637533.png](https://s2.loli.net/2021/12/10/q1NoOID9uKnlTd5.png)
 
 注意：mysql中limit实在order by 后执行
 
@@ -1559,7 +1556,7 @@ eg：
 insert into t_student (name) values('wangwu');
 ```
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211204102606782.png" alt="image-20211204102606782" style="zoom:80%;" />
+![image-20211204102606782.png](https://s2.loli.net/2021/12/10/9KTfBlxjkAsCwe1.png)
 
 不过默认值可以自定义，在建表的时候用default指定一个默认值//示例如下
 
@@ -1621,7 +1618,7 @@ create table t_user(
 	//生日可以使用字符串
 ```
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211204110740652.png" alt="image-20211204110740652" style="zoom: 80%;" />
+![image-20211204110740652.png](https://s2.loli.net/2021/12/10/VnsXLzcIkEjfHw8.png)
 
 生日：2002-09-18（10个字符）
 
@@ -1663,7 +1660,7 @@ mysql的日期格式：
 insert into t_user(id,name,birth) values (1,'zhangsan',str_to_date('01-10-1990','%d-%m-%Y'));//修改
 ```
 
-![image-20211204112005543](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211204112005543.png)
+![image-20211204112005543.png](https://s2.loli.net/2021/12/10/W2CnBgOYkRqJ3XE.png)
 
 **不过如果你提供的日期字符串是这个格式，str_to_date函数就不需要了,mysql会进行自动类型转换**
 
@@ -1689,7 +1686,7 @@ eg: 查询的时候以某个特定日期格式展示
 select id,name,date_format(birth, '%m/%d/%Y')  as  birth from t_user;
 ```
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211204172011642.png" alt="image-20211204172011642" style="zoom:80%;" />
+![image-20211204172011642.png](https://s2.loli.net/2021/12/10/gR4VMByENtpv6ZH.png)
 
 #### date和datetime的区别
 
@@ -1720,7 +1717,7 @@ insert into t_user(id,name,birth,create_time) values(2,'lisi','1990-10-02',now()
 
 
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211204181011565.png" alt="image-20211204181011565" style="zoom:80%;" />
+![image-20211204181011565.png](https://s2.loli.net/2021/12/10/Th4oDAmKuiMFfrE.png)
 
 获取系统当前时间，或取得时间带有时分秒，是datetime类型
 
@@ -1737,7 +1734,7 @@ insert into t_user (id,name,birth,create_time) values
 
 结果如下：
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205165133588.png" alt="image-20211205165133588" style="zoom:80%;" />
+![image-20211205165133588.png](https://s2.loli.net/2021/12/10/q9kT3Bbt4lgC6XY.png)
 
 ## 修改update(DML)
 
@@ -1752,7 +1749,7 @@ update t_user set name='jack',birth = '2000-10-11',create_time = now() where id 
 //把id为2的那行数据进行更改，记得加where条件，不然整张表都改了
 ```
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211204181435860.png" alt="image-20211204181435860" style="zoom:80%;" />
+![image-20211204181435860.png](https://s2.loli.net/2021/12/10/xpU8d6lj7iz54sf.png)
 
 ## 删除数据 delete（DML）
 
@@ -1770,7 +1767,7 @@ delete from 表名 where 条件；
 delete from t_user where id = 2;
 ```
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211204182826620.png" alt="image-20211204182826620" style="zoom:80%;" />
+![image-20211204182826620.png](https://s2.loli.net/2021/12/10/YvL6IhiHBDEOpoM.png)
 
 ```mysql
 delete from t_user;//删整张表
@@ -1842,8 +1839,7 @@ insert into t_vip (id) values (3);//报错，因为已经进行了非空约束�
 ​				批量执行sql语句可以使用sql脚本文件。
 
 ​				执行方法：source 后面把文件拖下来
-
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205180844579.png" alt="image-20211205180844579" style="zoom:80%;" />
+![image-20211205180844579.png](https://s2.loli.net/2021/12/10/MxFViLpfZSs8Inb.png)
 
 ​				实际工作中：第一天到公司，把上面给你的sql文件，之间用source语句，导入公司相关项目的数据库
 
@@ -1874,9 +1870,9 @@ insert into t_vip (id,name,email) values (4,'wangwu','wangwu@xinlang.com');//报
 insert into t_vip (id) values (4),(5);
 ```
 
-![image-20211205200428391](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205200428391.png)
+![image-20211205200428391.png](https://s2.loli.net/2021/12/10/xdCDb4phznoV5Gl.png)
 
-![image-20211205200723533](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205200723533.png)
+![image-20211205200723533.png](https://s2.loli.net/2021/12/10/B3cMouDdKJVQjaY.png)
 
 name字段虽然被unique约束了，但是可以为null
 
@@ -1916,7 +1912,7 @@ insert into t_vip (id,name,email) values (2,'zhangsan','zhangsan@xinlang.com');
 //name和email连个字段联合起来唯一
 ```
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205201828142.png" alt="image-20211205201828142" style="zoom:80%;" />
+![image-20211205201828142.png](https://s2.loli.net/2021/12/10/RHfOi13nYqNIGz2.png)
 
 ###  unique和not null可以联合使用
 
@@ -1930,7 +1926,7 @@ create table t_vip(
 );
 ```
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205204928779.png" alt="image-20211205204928779" style="zoom:80%;" />
+![image-20211205204928779.png](https://s2.loli.net/2021/12/10/s5YCf97eEmRSh1P.png)
 
 在MySQL当中一个字段被not null 和unique联合约束后，该字段自动变成主键字段（Oracle中不一样）
 
@@ -2006,8 +2002,7 @@ insert into t_vip(id,name,email) values(1,'zhangsan','zhangsan@123.com');
 insert into t_vip(id,name,email) values(1,'lisi','lisi@123.com');//正确
 insert into t_vip(id,name,email) values(1,'lisi','lisi@123.com');//错误：重复
 ```
-
-![image-20211205212156274](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205212156274.png)
+![image-20211205212156274.png](https://s2.loli.net/2021/12/10/FPxdkQnLwtvoysN.png)
 
 注意：一张表主键约束只能添加一个（一个复合主键算一个主键）
 
@@ -2049,8 +2044,7 @@ insert into t_vip(id,name,email) values(1,'lisi','lisi@123.com');//错误：重�
  insert into t_vip(name) values('zhangsan');
  select * from t_vip;
  ```
-
-![image-20211205213740595](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205213740595.png)
+![image-20211205213740595.png](https://s2.loli.net/2021/12/10/Jv2TkGLxUHwFKS6.png)
 
 ## 外键约束（非常重要）
 
@@ -2209,7 +2203,7 @@ ps：约束的增删改在开发过程中不常用，此处不加赘述
 show create table t_students;
 ```
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211206101734891.png" alt="image-20211206101734891" style="zoom:80%;" />
+![image-20211206101734891.png](https://s2.loli.net/2021/12/10/sYteIZ3q7oXHKGU.png)
 
 **默认存储引擎**：**InnoDB**
 
@@ -2227,9 +2221,7 @@ create table t_product(
 ) 	engine = innodb default charset = gbk;
 show create table t_product;
 ```
-
-![image-20211206102852195](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211206102852195.png)
-
+![image-20211206102852195.png](https://s2.loli.net/2021/12/10/GaqbAYzc6RDdXCn.png)
 ## 查看mysql支持那些存储引擎
 
 ```mysql
@@ -2306,7 +2298,7 @@ Transactions: NO
 
 mysql支持九个存储引擎，版本不同，支持情况不同，8.0.27支持8种
 
-![image-20211206103635747](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211206103635747.png)
+![image-20211206103635747.png](https://s2.loli.net/2021/12/10/hQ4KSbXCOzWT2sN.png)
 
 ## **常见存储引擎**：
 
@@ -2538,7 +2530,7 @@ A教室和B教室中间有一道墙，这道墙可以很厚，也可以很薄，
 select @@transaction_isolation;
 ```
 
-![image-20211206194857742](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211206194857742.png)
+![image-20211206194857742.png](https://s2.loli.net/2021/12/10/vIyg4O1cEif6D8j.png)
 
 mysql 默认隔离级别
 
@@ -2691,8 +2683,7 @@ id(PK)					name				每一行记录在硬盘上都有一个物理存储编号
 
 **创建索引**
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211207171255805.png" alt="image-20211207171255805" style="zoom:80%;" />
-
+![image-20211207171255805.png](https://s2.loli.net/2021/12/10/UEQj3r4LDuMov1k.png)
 案例：为emp表的ename字段添加索引，起名：index_emp_index
 
 ```mysql
@@ -2713,7 +2704,7 @@ drop index_emp_index on emp;
 explain select * from emp where ename = 'king';
 ```
 
-![image-20211207172714155](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211207172714155.png)
+![image-20211207172714155.png](https://s2.loli.net/2021/12/10/xT5iVFnA7f62qCr.png)
 
 扫描14条记录，说明没有使用索引。（type=ALL）
 
