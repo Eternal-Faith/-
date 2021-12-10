@@ -2714,7 +2714,7 @@ create index emp_index_index on emp(ename);
 explain select * from emp where ename = 'king';
 ```
 
-![image-20211207173036106](https://ibb.co/DrvR9yV)
+![image-20211207173036106](https://i.ibb.co/FHyD5Mx/image-20211207173036106.png)
 
 扫描了1条记录
 
