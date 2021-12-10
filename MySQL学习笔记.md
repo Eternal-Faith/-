@@ -494,7 +494,7 @@ select ename,sal from emp where sal between 1250 and 3000 order by sal desc;
 
 ​			select lower(ename) as ename from emp;
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203201704165.png" alt="image-20211203201704165" style="zoom:80%;" />
+![image-20211203201629641.png](https://s2.loli.net/2021/12/10/AKBzokDcPVRi73w.png)
 
 #### upper 转大写 
 
@@ -554,11 +554,11 @@ eg：保留整数：select round(1236.567,0) as result from emp;
 
 生成随机数：select rand() from emp;
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203205751726.png" alt="image-20211203205751726" style="zoom:80%;" />
 
+![image-20211203205751726.png](https://s2.loli.net/2021/12/10/eN8qGp49skK1TXb.png)
 生成一百以内的随机数：select round( rand()*100, 0 ) from emp;
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203205811746.png" alt="image-20211203205811746" style="zoom:80%;" />
+![image-20211203205811746.png](https://s2.loli.net/2021/12/10/DPE6pmVngTlrQWv.png)
 
 #### ifnull 空处理函数
 
@@ -586,8 +586,7 @@ eg:当员工工作岗位是manager时上调10%，工作岗位是salesman时上�
 
 select ename,job ,sal,(case job when 'manager' then sal*1.1 when 'salesman' then sal *1.5 else sal end) as newsal from emp;
 
-![image-20211203211525928](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203211525928.png)
-
+![image-20211203211525928.png](https://s2.loli.net/2021/12/10/Wx6iV134ezRADMl.png)
 ## 分组函数
 
 多行处理函数：输入多行最终输出一行
@@ -869,17 +868,15 @@ SQL99：1999年出现的语法（重点学习SQL99）
 
 
 
-![image-20211205103430525](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205103430525.png)
-
-![image-20211205103605348](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205103605348.png)
+![image-20211205103430525.png](https://s2.loli.net/2021/12/10/2RgyaeunG8EvCDh.png)
+![image-20211205103605348.png](https://s2.loli.net/2021/12/10/qrkyEj4g5KeDzTU.png)
 
 查询每个员工所在的部门名称:
 
 ```mysql
 select ename,dname from emp,dept;
 ```
-
-![image-20211205104125705](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205104125705.png)
+![image-20211205104125705.png](https://s2.loli.net/2021/12/10/2uJRbxLsdOWNZ8w.png)
 
 ​                                                                  ......
 
@@ -907,8 +904,7 @@ from
 where
 	e.deptno = d.deptno;   //SQL92语法
 ```
-
-![image-20211205105242897](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205105242897.png)
+![image-20211205105242897.png](https://s2.loli.net/2021/12/10/MOPRGkDwHc2r84U.png)
 
 通过笛卡尔积现象，可以看出表的连接次数越多效率越低，应尽量降低表的连接次数
 
@@ -976,7 +972,7 @@ on
 
 eg：找出每个员工的薪资等级，要求显示员工名，薪资，薪资等级
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205132813191.png" alt="image-20211205132813191" style="zoom:67%;" />
+![image-20211205132813191.png](https://s2.loli.net/2021/12/10/FrnY95NTfbQ6uip.png)
 
 显然：若是没有条件限制，根据笛卡尔积现象将会显示70条记录
 
@@ -993,7 +989,7 @@ on
 	e.sal between s.losal and s.hisal;
 ```
 
-![image-20211205133239466](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205133239466.png)
+![image-20211205133239466.png](https://s2.loli.net/2021/12/10/9lWYZU7JVatNOLr.png)
 
 #### 内连接之自连接
 
@@ -1003,7 +999,7 @@ eg：查询员工的上级领导，要求显示员工名和对应的领导名
 
 ps:没有King，King无领导
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205133744763.png" alt="image-20211205133744763" style="zoom:80%;" /><img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205134757010.png" alt="image-20211205134757010" style="zoom: 67%;" /><img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205133744763.png" alt="image-20211205133744763" style="zoom:80%;" />
+![image-20211205133744763.png](https://s2.loli.net/2021/12/10/gJlIOm943FRSquv.png)![image-20211205134727735.png](https://s2.loli.net/2021/12/10/lkwVWrgQ7aZsfqu.png)![image-20211205133744763.png](https://s2.loli.net/2021/12/10/gJlIOm943FRSquv.png)
 
 技巧:一张表看成两张表
 
@@ -1025,8 +1021,7 @@ on
 ps：开发中外连用的较多
 
 eg1：查询每个员工的职业，并把所有职业显示出来
-
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205135226054.png" alt="image-20211205135226054" style="zoom: 67%;" />![image-20211205135241752](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205135241752.png)
+![image-20211205135226054.png](https://s2.loli.net/2021/12/10/mXAQU16DJHzf39g.png)![image-20211205135241752.png](https://s2.loli.net/2021/12/10/75f1BPnEixWlmqe.png)
 
 内连接的特点：将完全能够匹配上这个条件的数据查询出来（A,B 两张是平等关系，没主次之分）
 
@@ -1052,7 +1047,7 @@ on
 //这条命令把dname中的所有数据都显示出来
 ```
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205135823261.png" alt="image-20211205135823261" style="zoom:80%;" /><img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205135843337.png" alt="image-20211205135843337" style="zoom:80%;" />
+![image-20211205135823261.png](https://s2.loli.net/2021/12/10/azBPJbF3kqOscUH.png)![image-20211205135843337.png](https://s2.loli.net/2021/12/10/wrdUPlTBg7548Qp.png)
 
 right：表示将join关键字右边的这张表看成主表，主要是为了将这张表的数据全部查询出来，捎带着关联查询左边的表
 
@@ -1088,8 +1083,7 @@ left join
 on
 	a.mgr = b.empno;
 ```
-
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205142221864.png" alt="image-20211205142221864" style="zoom:50%;" />
+![image-20211205142221864.png](https://s2.loli.net/2021/12/10/w2DAWcGKOMa7zr9.png)
 
 ### 多表连接
 
@@ -1117,8 +1111,7 @@ on
 案例：找出每个员工的部门名称，以及工资等级，要求显示员工名，部门名，薪资，薪资等级
 
 将这三张表其别称为e，s，d
-
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205143250505.png" alt="image-20211205143250505" style="zoom: 67%;" /><img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205143314798.png" alt="image-20211205143314798" style="zoom:67%;" />
+![image-20211205143250505.png](https://s2.loli.net/2021/12/10/KDcQx4WgEbBaYUN.png)![image-20211205143314798.png](https://s2.loli.net/2021/12/10/F42edqvOJzyuhHY.png)
 
 ```mysql
 select 
@@ -1136,8 +1129,7 @@ on
 ```
 
 结果如下：
-
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211205143937346.png" alt="image-20211205143937346" style="zoom:67%;" />
+![image-20211205143937346.png](https://s2.loli.net/2021/12/10/qhDgjmJeO5lFZtM.png)
 
 案例升级：找出每个员工的部门名称，以及工资等级，还有上级领导，要求显示员工名，领导名，部门名，薪资，薪资等级
 
