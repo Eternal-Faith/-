@@ -176,7 +176,7 @@ salgrade：工资等级表
 
 ![image-20211203081402014.png](https://s2.loli.net/2021/12/09/7nKjOIJ4ENDialA.png)
 
-![image-20211203081418401](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203081418401.png)
+![image-20211203081418401.png](https://s2.loli.net/2021/12/10/3XyRnChfF2mGPt4.png)
 
 varchar是字符型相当于string
 
@@ -194,8 +194,7 @@ select 字段名 from 表名；
 
 eg：查询部门名字
 
-![image-20211203083127717](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203083127717.png)
-
+![image-20211203083127717.png](https://s2.loli.net/2021/12/10/jV1Z8WnqLbcwQlM.png)
 #### 查询两个以上的字段
 
 使用逗号隔开
@@ -226,7 +225,7 @@ eg：mysql> select deptno,dname as deptname from dept;
 
 ​     	  select语句永远不会进行修改操作（只查询）
 
-![image-20211203083934076](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203083934076.png)
+![image-20211203083934076.png](https://s2.loli.net/2021/12/10/paFz2YyuLlX3tmk.png)
 
 此外as关键字可以省略
 
@@ -234,7 +233,7 @@ eg：mysql> select deptno,dname deptname from dept;
 
 ​         <!--dname deptname后面这个是前面的别名-->
 
-![image-20211203084417220](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203084417220.png)
+![image-20211203084417220.png](https://s2.loli.net/2021/12/10/gyUXnFER4qsDH7x.png)
 
 如果别名里有空格：用单引号或双引号将别名括起来
 
@@ -242,7 +241,8 @@ eg：mysql> select deptno,dname 'dept name' from dept;
 
 ​		mysql> select deptno,dname  "dept name" from dept;
 
-![image-20211203084832239](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203084832239.png)
+
+![image-20211203084832239.png](https://s2.loli.net/2021/12/10/iKZgs9aftSeyRwW.png)
 
 <!--在所有数据库中，字符串用单引号括起来是标准，双引号在mysql中可用但在Oracle中不可用-->
 
@@ -250,11 +250,11 @@ eg：mysql> select deptno,dname 'dept name' from dept;
 
 select ename,sal from emp;(先查询有哪些员工及其对应工资)
 
-![image-20211203085433903](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203085433903.png)
+![image-20211203085433903.png](https://s2.loli.net/2021/12/10/P81g5AzQjs2uaLy.png)
 
 select ename,sal*12 from emp; (在执行计算的命令)//(字段可以使用数学表达式)
 
-![image-20211203085550176](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203085550176.png)
+![image-20211203085550176.png](https://s2.loli.net/2021/12/10/zDAsXGQUF1huemv.png)
 
 select ename,sal*12 as yearsal from emp; //起别名
 
@@ -406,7 +406,7 @@ _:下划线匹配任意单个字符
 
 eg：找出名字中含有o的员工名字
 
-​		 select ename from emp where ename like '%o%';  ![image-20211203152651377](C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203152651377.png)
+​		 select ename from emp where ename like '%o%';  ![image-20211203152651377.png](https://s2.loli.net/2021/12/10/2pzOlS7eRoUZHLi.png)
 
 找出名字中以T结尾的员工名字
 
@@ -440,8 +440,7 @@ select ename,sal from emp order by sal ;   //默认是升序
 
 select ename,sal from emp order by sal asc ; //指定升序（这条命令和上一条等效） 
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203195117593.png" alt="image-20211203195117593" style="zoom: 80%;" />
-
+![image-20211203195117593.png](https://s2.loli.net/2021/12/10/NcFvJtnUkrDQRb3.png)
 ### 降序
 
 eg:指定按照薪资降序
@@ -450,8 +449,7 @@ eg:指定按照薪资降序
 select ename,sal from emp order by sal desc; //默认后面加desc即为降序
 ```
 
-<img src="C:\Users\郝锦杰\AppData\Roaming\Typora\typora-user-images\image-20211203195305619.png" alt="image-20211203195305619" style="zoom:80%;" />
-
+![image-20211203195305619.png](https://s2.loli.net/2021/12/10/XxKMmlu61a8PnzQ.png)
 ### 按多个字段排序
 
 查询员工名字和薪资，要求按照薪资升序，若薪资一样，再按名字升序排列
